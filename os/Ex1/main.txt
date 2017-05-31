@@ -1,0 +1,57 @@
+/usr/src/linux-4.10.10/arch/x86/entry/syscalls/syscall_64.tbl
+系统调用表，每个表项记录了某个系统调用的服务例程的入口地址
+332     64      xfsetnice               sys_xfsetnice
+
+/usr/include/asm-gerneric/unistd.h
+惟一的标识每一个系统调用
+#define __NR_xfsetnice 332
+__SYSCALL(__NR_xfsetnice, sys_xfsetnice)
+
+
+
+/usr/src/linux-4.10.10/kernel/sys.c
+编写的服务例程保存在此
+
+/*
+ *add by xf
+ *if flag equals 0 then  getneicevalue
+ *if flag equals 1 then  setnicevalue and return 0
+ */
+SYSCALL_DEFINE3(xfsetnice, pid_t, pid, int, flag, int, nicevalue)
+{
+        int num=-EFAULT;
+        struct task_struct *p;
+        for(p = &init_task;(p = next_task(p)) != &init_task;){
+          if(p->pid == pid){
+              if(flag == 0){
+                printk("xf's get nice,the process's nice = %d",task_nice(p));
+                num=task_nice(p);
+              }
+              if(flag == 1){
+                printk("xf's set nice,the process changed to %d",nicevalue);
+                set_user_nice(p,nicevalue);
+                num=0;
+              }
+
+            return num;
+          }
+        }
+
+        return num;
+}
+
+
+
+//测试函数
+#include<stdio.h>
+#include<sys/syscall.h>
+#include<unistd.h>
+#define xfsetnice 332
+int main()
+{
+printf("之前：%ld\n", syscall(xfsetnice,2603,0,1));
+printf("中间：%ld\n", syscall(xfsetnice,2603,1,2));
+printf("之后：%ld\n", syscall(xfsetnice,2603,0,1));
+}
+
+
