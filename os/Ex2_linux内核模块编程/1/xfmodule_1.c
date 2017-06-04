@@ -19,7 +19,11 @@ static int __init xfmodule_1_init(void)
   struct task_struct *p;
   printk("Name\tPID\tState\tPrio\t\n"); 
    for_each_process(p)
-     printk("%s\t%d\t%ld\t%d\n",p->comm,p->pid,p->state,p->prio);
+{
+   if(p->mm==NULL)
+      printk("%s\t%d\t%ld\t%d\n",p->comm,p->pid,p->state,p->prio);
+}
+    
   return 0;
 }
 

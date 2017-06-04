@@ -1,0 +1,1 @@
+cmd_/media/lxf/Study/programing/github/hdu/os/Ex2_linux内核模块编程/2/xfmodule_2.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /media/lxf/Study/programing/github/hdu/os/Ex2_linux内核模块编程/2/xfmodule_2.ko /media/lxf/Study/programing/github/hdu/os/Ex2_linux内核模块编程/2/xfmodule_2.o /media/lxf/Study/programing/github/hdu/os/Ex2_linux内核模块编程/2/xfmodule_2.mod.o ;  true

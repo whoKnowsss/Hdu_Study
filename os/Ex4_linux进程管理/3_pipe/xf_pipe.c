@@ -41,7 +41,7 @@ void WritePipe(int id){
         else{
             printf("子程序%d(pid=%d)写入失败\n",id,getpid());
         }
-        sleep(3);   //子进程沉睡3s,保证父进程可以从管道读出数据
+        sleep(10);   //子进程沉睡3s,保证父进程可以从管道读出数据
         lockf(fd[1],0,0);  //解锁
         exit(0);
 }

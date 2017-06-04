@@ -1,3 +1,17 @@
+
+//刚开始的测试函数
+int xfsetnice(pid_t pid,int flag,int nicevalue){
+	int num=-1;
+	if(flag==0)
+		num=getpriority(0,pid);
+	if(flag==1)
+		num=setpriority(0,pid,nicevalue);		
+    return num;
+}
+
+
+
+
 /usr/src/linux-4.10.10/arch/x86/entry/syscalls/syscall_64.tbl
 系统调用表，每个表项记录了某个系统调用的服务例程的入口地址
 332     64      xfsetnice               sys_xfsetnice
