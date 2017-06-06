@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "D:/programing/FPGA/Test_3/test_3.xst" -ofn "D:/programing/FPGA/Test_3/test_3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test_3.ucf -p xc6slx16-csg324-3 test_3.ngc test_3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_3_map.ncd test_3.ngd test_3.pcf 
+par -w -intstyle ise -ol high -mt off test_3_map.ncd test_3.ncd test_3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_3.twx test_3.ncd -o test_3.twr test_3.pcf -ucf test_3.ucf 
+bitgen -intstyle ise -f test_3.ut test_3.ncd 
+xst -intstyle ise -ifn "D:/programing/FPGA/Test_3/test_3.xst" -ofn "D:/programing/FPGA/Test_3/test_3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test_3.ucf -p xc6slx16-csg324-3 test_3.ngc test_3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_3_map.ncd test_3.ngd test_3.pcf 
+par -w -intstyle ise -ol high -mt off test_3_map.ncd test_3.ncd test_3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_3.twx test_3.ncd -o test_3.twr test_3.pcf -ucf test_3.ucf 
+bitgen -intstyle ise -f test_3.ut test_3.ncd 
+bitgen -intstyle ise -f test_3.ut test_3.ncd 
+xst -intstyle ise -ifn "D:/programing/FPGA/Test_3/test_3.xst" -ofn "D:/programing/FPGA/Test_3/test_3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test_3.ucf -p xc6slx16-csg324-3 test_3.ngc test_3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test_3_map.ncd test_3.ngd test_3.pcf 
+par -w -intstyle ise -ol high -mt off test_3_map.ncd test_3.ncd test_3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test_3.twx test_3.ncd -o test_3.twr test_3.pcf -ucf test_3.ucf 
+bitgen -intstyle ise -f test_3.ut test_3.ncd 

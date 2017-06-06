@@ -1,0 +1,6 @@
+NET A LOC="T5";
+NET B LOC="V8";
+NET C LOC="U8";
+NET D LOC="N8";
+NET E LOC="M8";
+NET F LOC="T11";

@@ -1,0 +1,107 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Apr 26 10:08:56 2017
+# Process ID: 6696
+# Log file: F:/Xilinx_ISE/FPGA/shiyan4/planAhead_run_1/planAhead.log
+# Journal file: F:/Xilinx_ISE/FPGA/shiyan4/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -116 day(s)
+INFO: [Device 21-36] Loading parts and site information from F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source F:/Xilinx_ISE/FPGA/shiyan4/pa.fromHdl.tcl
+# create_project -name shiyan4 -dir "F:/Xilinx_ISE/FPGA/shiyan4/planAhead_run_1" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "shiyan4.ucf" [current_fileset -constrset]
+Adding file 'F:/Xilinx_ISE/FPGA/shiyan4/shiyan4.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {shiyan4.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top shiyan4 $srcset
+# add_files [list {shiyan4.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "F:/Xilinx_ISE/FPGA/shiyan4/shiyan4.v" into library work
+Loading clock regions from F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : F:/Xilinx_ISE/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [F:/Xilinx_ISE/FPGA/shiyan4/shiyan4.ucf]
+Finished Parsing UCF File [F:/Xilinx_ISE/FPGA/shiyan4/shiyan4.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 909bcb83
+open_rtl_design: Time (s): elapsed = 00:00:17 . Memory (MB): peak = 608.383 ; gain = 186.125
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T11 [get_ports {LED[7]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {LED[6]}]
+endgroup
+startgroup
+set_property package_pin N11 [get_ports {LED[5]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {LED[4]}]
+endgroup
+startgroup
+set_property package_pin V15 [get_ports {LED[3]}]
+endgroup
+startgroup
+set_property package_pin U15 [get_ports {LED[2]}]
+endgroup
+startgroup
+set_property package_pin V16 [get_ports {LED[1]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {LED[0]}]
+endgroup
+startgroup
+set_property package_pin T5 [get_ports {W_Addr[4]}]
+endgroup
+startgroup
+set_property package_pin V8 [get_ports {W_Addr[3]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {W_Addr[2]}]
+endgroup
+startgroup
+set_property package_pin N8 [get_ports {W_Addr[1]}]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports {W_Addr[0]}]
+endgroup
+startgroup
+set_property package_pin V9 [get_ports C2]
+endgroup
+startgroup
+set_property package_pin T9 [get_ports {C1[1]}]
+endgroup
+startgroup
+set_property package_pin T10 [get_ports {C1[0]}]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports Clk]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports Reset]
+endgroup
+set_property package_pin "" [get_ports [list  C2]]
+startgroup
+set_property package_pin V9 [get_ports Write_Reg]
+endgroup
+startgroup
+set_property package_pin C4 [get_ports C2]
+endgroup
+save_constraints

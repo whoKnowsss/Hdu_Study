@@ -1,0 +1,11 @@
+[Inputs]
+Mem_Write
+Clk
+=Mem_Addr[7:2]=
+=C[1:0]=
+[Outputs]
+=LED[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel TestRAM_B
+

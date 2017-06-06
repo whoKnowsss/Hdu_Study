@@ -1,0 +1,394 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: test_3.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "test_3.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "test_3"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : test_3
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\programing\FPGA\Test_3\test_3.v" into library work
+Parsing module <test_3>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <test_3>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <test_3>.
+    Related source file is "D:\programing\FPGA\Test_3\test_3.v".
+    Found 33-bit subtractor for signal <GND_1_o_GND_1_o_sub_8_OUT> created at line 58.
+    Found 33-bit adder for signal <n0048> created at line 57.
+    Found 32-bit shifter logical left for signal <B[31]_A[31]_shift_left_10_OUT> created at line 60
+    Found 32-bit 8-to-1 multiplexer for signal <F> created at line 52.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0056> created at line 27.
+WARNING:Xst:737 - Found 1-bit latch for signal <C32>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <A[31]_B[31]_LessThan_9_o> created at line 59
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <test_3> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 33-bit adder                                          : 1
+ 33-bit subtractor                                     : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# Xors                                                 : 2
+ 1-bit xor4                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 33-bit adder                                          : 1
+ 33-bit subtractor                                     : 1
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 32-bit shifter logical left                           : 1
+# Xors                                                 : 2
+ 1-bit xor4                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <test_3> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block test_3, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : test_3.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 112
+#      GND                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 15
+#      LUT4                        : 18
+#      LUT5                        : 29
+#      LUT6                        : 41
+#      MUXF7                       : 6
+# FlipFlops/Latches                : 1
+#      LD                          : 1
+# IO Buffers                       : 51
+#      IBUF                        : 9
+#      OBUF                        : 42
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               1  out of  18224     0%  
+ Number of Slice LUTs:                  105  out of   9112     1%  
+    Number used as Logic:               105  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    105
+   Number with an unused Flip Flop:     104  out of    105    99%  
+   Number with an unused LUT:             0  out of    105     0%  
+   Number of fully used LUT-FF pairs:     1  out of    105     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          51
+ Number of bonded IOBs:                  51  out of    232    21%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------+------------------------+-------+
+Clock Signal                                             | Clock buffer(FF name)  | Load  |
+---------------------------------------------------------+------------------------+-------+
+ALU_OP[2]_GND_3_o_Mux_13_o(ALU_OP[2]_GND_3_o_Mux_13_o1:O)| NONE(*)(C32)           | 1     |
+---------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 3.141ns
+   Maximum output required time after clock: 7.497ns
+   Maximum combinational path delay: 9.758ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ALU_OP[2]_GND_3_o_Mux_13_o'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              3.141ns (Levels of Logic = 2)
+  Source:            AB_SW<0> (PAD)
+  Destination:       C32 (LATCH)
+  Destination Clock: ALU_OP[2]_GND_3_o_Mux_13_o falling
+
+  Data Path: AB_SW<0> to C32
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            43   1.222   1.677  AB_SW_0_IBUF (AB_SW_0_IBUF)
+     LUT4:I1->O            1   0.205   0.000  ALU_OP[2]_C32_Mux_12_o1 (ALU_OP[2]_C32_Mux_12_o)
+     LD:D                      0.037          C32
+    ----------------------------------------
+    Total                      3.141ns (1.464ns logic, 1.677ns route)
+                                       (46.6% logic, 53.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ALU_OP[2]_GND_3_o_Mux_13_o'
+  Total number of paths / destination ports: 15 / 2
+-------------------------------------------------------------------------
+Offset:              7.497ns (Levels of Logic = 5)
+  Source:            C32 (LATCH)
+  Destination:       LED<0> (PAD)
+  Source Clock:      ALU_OP[2]_GND_3_o_Mux_13_o falling
+
+  Data Path: C32 to LED<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               6   0.498   0.973  C32 (C32)
+     LUT4:I1->O            3   0.205   0.651  LED<0>91 (LED<0>_bdd21)
+     LUT6:I5->O            1   0.205   0.580  LED<0>7 (LED<0>7)
+     LUT5:I4->O            1   0.205   0.827  LED<0>8 (LED<0>8)
+     LUT6:I2->O            1   0.203   0.579  LED<0>9 (LED_0_OBUF)
+     OBUF:I->O                 2.571          LED_0_OBUF (LED<0>)
+    ----------------------------------------
+    Total                      7.497ns (3.887ns logic, 3.610ns route)
+                                       (51.9% logic, 48.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1122 / 42
+-------------------------------------------------------------------------
+Delay:               9.758ns (Levels of Logic = 6)
+  Source:            ALU_OP<0> (PAD)
+  Destination:       LED<7> (PAD)
+
+  Data Path: ALU_OP<0> to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.789  ALU_OP_0_IBUF (ALU_OP_0_IBUF)
+     LUT3:I0->O            8   0.205   1.031  F<10>121 (F<10>_bdd21)
+     LUT5:I2->O            1   0.205   0.827  LED<7>2 (LED<7>2)
+     LUT6:I2->O            1   0.203   0.924  LED<7>3 (LED<7>3)
+     LUT6:I1->O            1   0.203   0.579  LED<7>13 (LED_7_OBUF)
+     OBUF:I->O                 2.571          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      9.758ns (4.609ns logic, 5.149ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.68 secs
+ 
+--> 
+
+Total memory usage is 297748 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

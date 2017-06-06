@@ -1,0 +1,694 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: shiyan4.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "shiyan4.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "shiyan4"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : shiyan4
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\programing\FPGA\test_4\shiyan4.v" into library work
+Parsing module <shiyan4>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <shiyan4>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <shiyan4>.
+    Related source file is "D:\programing\FPGA\test_4\shiyan4.v".
+    Found 1024-bit register for signal <n0055[1023:0]>.
+    Found 8-bit 4-to-1 multiplexer for signal <C1[1]_R_Data_A[31]_wide_mux_0_OUT> created at line 40.
+    Found 8-bit 4-to-1 multiplexer for signal <C1[1]_R_Data_B[31]_wide_mux_1_OUT> created at line 50.
+    Found 32-bit 32-to-1 multiplexer for signal <R_Data_A> created at line 83.
+    Found 32-bit 32-to-1 multiplexer for signal <R_Data_B> created at line 84.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred  58 Multiplexer(s).
+Unit <shiyan4> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 1024-bit register                                     : 1
+# Multiplexers                                         : 58
+ 1-bit 2-to-1 multiplexer                              : 20
+ 32-bit 2-to-1 multiplexer                             : 32
+ 32-bit 32-to-1 multiplexer                            : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1024
+ Flip-Flops                                            : 1024
+# Multiplexers                                         : 58
+ 1-bit 2-to-1 multiplexer                              : 20
+ 32-bit 2-to-1 multiplexer                             : 32
+ 32-bit 32-to-1 multiplexer                            : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+ 8-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <REG_Files_31_766> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_762> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_758> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_744> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_734> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_730> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_726> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_712> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_702> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_698> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_694> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_680> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_670> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_666> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_662> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_648> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_638> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_634> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_630> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_616> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_606> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_602> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_598> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_584> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_574> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_570> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_566> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_552> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_542> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_538> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_534> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_520> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_1022> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_1018> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_1014> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_1000> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_990> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_986> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_982> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_968> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_958> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_954> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_950> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_936> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_926> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_922> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_918> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_904> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_894> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_890> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_886> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_872> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_862> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_858> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_854> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_840> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_830> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_826> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_822> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_808> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_798> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_794> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_790> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_776> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_254> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_250> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_246> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_232> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_222> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_218> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_214> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_200> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_190> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_186> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_182> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_168> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_158> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_154> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_150> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_136> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_126> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_122> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_118> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_104> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_94> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_90> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_86> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_72> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_62> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_58> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_54> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_40> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_30> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_26> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_22> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_8> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_510> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_506> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_502> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_488> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_478> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_474> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_470> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_456> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_446> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_442> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_438> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_424> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_414> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_410> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_406> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_392> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_382> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_378> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_374> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_360> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_350> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_346> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_342> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_328> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_318> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_314> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_310> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_296> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_286> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_282> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_278> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <REG_Files_31_264> (without init value) has a constant value of 0 in block <shiyan4>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <shiyan4> ...
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_516> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_518> <REG_Files_31_526> <REG_Files_31_530> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_64> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_66> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_517> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_540> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_71> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_95> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_519> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_543> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_480> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_482> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_525> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_541> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_68> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_70> <REG_Files_31_78> <REG_Files_31_82> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_69> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_92> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_484> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_486> <REG_Files_31_494> <REG_Files_31_498> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_77> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_93> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_485> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_508> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_487> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_511> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_493> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_509> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_544> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_546> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_551> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_575> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_548> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_550> <REG_Files_31_558> <REG_Files_31_562> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_96> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_98> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_549> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_572> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_557> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_573> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_612> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_614> <REG_Files_31_622> <REG_Files_31_626> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_608> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_610> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_613> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_636> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_615> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_639> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_621> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_637> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_580> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_582> <REG_Files_31_590> <REG_Files_31_594> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_576> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_578> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_581> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_604> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_583> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_607> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_640> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_642> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_589> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_605> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_644> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_646> <REG_Files_31_654> <REG_Files_31_658> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_645> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_668> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_647> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_671> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_653> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_669> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_704> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_706> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_711> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_735> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_708> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_710> <REG_Files_31_718> <REG_Files_31_722> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_709> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_732> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_672> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_674> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_717> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_733> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_676> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_678> <REG_Files_31_686> <REG_Files_31_690> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_677> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_700> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_679> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_703> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_685> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_701> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_740> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_742> <REG_Files_31_750> <REG_Files_31_754> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_736> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_738> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_741> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_764> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_743> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_767> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_800> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_802> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_749> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_765> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_804> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_806> <REG_Files_31_814> <REG_Files_31_818> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_805> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_828> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_807> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_831> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_813> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_829> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_772> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_774> <REG_Files_31_782> <REG_Files_31_786> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_768> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_770> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_773> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_796> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_775> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_799> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_781> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_797> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_832> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_834> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_100> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_102> <REG_Files_31_110> <REG_Files_31_114> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_101> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_124> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_103> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_127> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_836> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_838> <REG_Files_31_846> <REG_Files_31_850> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_837> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_860> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_839> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_863> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_845> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_861> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_900> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_902> <REG_Files_31_910> <REG_Files_31_914> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_901> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_924> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_109> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_125> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_903> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_927> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_864> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_866> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_909> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_925> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_132> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_134> <REG_Files_31_142> <REG_Files_31_146> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_128> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_130> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_871> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_895> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_133> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_156> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_135> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_159> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_868> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_870> <REG_Files_31_878> <REG_Files_31_882> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_141> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_157> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_869> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_892> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_877> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_893> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_932> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_934> <REG_Files_31_942> <REG_Files_31_946> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_928> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_930> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_933> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_956> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_935> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_959> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_941> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_957> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_160> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_162> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_205> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_221> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_896> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_898> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_164> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_166> <REG_Files_31_174> <REG_Files_31_178> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_165> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_188> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_167> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_191> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_960> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_962> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_173> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_189> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_224> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_226> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_231> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_255> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_964> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_966> <REG_Files_31_974> <REG_Files_31_978> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_965> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_988> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_228> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_230> <REG_Files_31_238> <REG_Files_31_242> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_229> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_252> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_967> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_991> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_973> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_989> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_192> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_194> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_237> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_253> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_196> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_198> <REG_Files_31_206> <REG_Files_31_210> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_301> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_317> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_197> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_220> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_199> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_223> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_992> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_994> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_260> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_262> <REG_Files_31_270> <REG_Files_31_274> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_256> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_258> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_261> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_284> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_263> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_287> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_996> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_998> <REG_Files_31_1006> <REG_Files_31_1010> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_997> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_1020> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_320> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_322> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_999> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_1023> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_269> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_285> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_324> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_326> <REG_Files_31_334> <REG_Files_31_338> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_325> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_348> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_327> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_351> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_333> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_349> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_292> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_294> <REG_Files_31_302> <REG_Files_31_306> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_288> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_290> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_293> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_316> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_295> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_319> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_0> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_2> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_352> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_354> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_4> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_6> <REG_Files_31_14> <REG_Files_31_18> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_356> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_358> <REG_Files_31_366> <REG_Files_31_370> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_5> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_28> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_357> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_380> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_7> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_31> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_1005> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_1021> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_359> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_383> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_365> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_381> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_420> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_422> <REG_Files_31_430> <REG_Files_31_434> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_13> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_29> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_421> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_444> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_416> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_418> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_423> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_447> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_384> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_386> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_429> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_445> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_32> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_34> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_391> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_415> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_388> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_390> <REG_Files_31_398> <REG_Files_31_402> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_36> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_38> <REG_Files_31_46> <REG_Files_31_50> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_389> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_412> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_37> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_60> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_39> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_63> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_452> in Unit <shiyan4> is equivalent to the following 3 FFs/Latches, which will be removed : <REG_Files_31_454> <REG_Files_31_462> <REG_Files_31_466> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_397> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_413> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_45> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_61> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_453> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_476> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_448> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_450> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_455> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_479> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_461> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_477> 
+INFO:Xst:2261 - The FF/Latch <REG_Files_31_512> in Unit <shiyan4> is equivalent to the following FF/Latch, which will be removed : <REG_Files_31_514> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block shiyan4, actual ratio is 19.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 672
+ Flip-Flops                                            : 672
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : shiyan4.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1210
+#      GND                         : 1
+#      LUT3                        : 11
+#      LUT4                        : 645
+#      LUT5                        : 42
+#      LUT6                        : 467
+#      MUXF7                       : 44
+# FlipFlops/Latches                : 672
+#      FDCE                        : 672
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 82
+#      IBUF                        : 10
+#      OBUF                        : 72
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             672  out of  18224     3%  
+ Number of Slice LUTs:                 1165  out of   9112    12%  
+    Number used as Logic:              1165  out of   9112    12%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1165
+   Number with an unused Flip Flop:     493  out of   1165    42%  
+   Number with an unused LUT:             0  out of   1165     0%  
+   Number of fully used LUT-FF pairs:   672  out of   1165    57%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          83
+ Number of bonded IOBs:                  83  out of    232    35%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 672   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.405ns (Maximum Frequency: 711.617MHz)
+   Minimum input arrival time before clock: 5.134ns
+   Maximum output required time after clock: 8.831ns
+   Maximum combinational path delay: 13.666ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 1.405ns (frequency: 711.617MHz)
+  Total number of paths / destination ports: 672 / 672
+-------------------------------------------------------------------------
+Delay:               1.405ns (Levels of Logic = 1)
+  Source:            REG_Files_31_0 (FF)
+  Destination:       REG_Files_31_0 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: REG_Files_31_0 to REG_Files_31_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.651  REG_Files_31_0 (REG_Files_31_0)
+     LUT4:I3->O            1   0.205   0.000  Mmux_REG_Files[31][31]_C1[1]_mux_10_OUT11 (REG_Files[31][31]_C1[1]_mux_10_OUT<0>)
+     FDCE:D                    0.102          REG_Files_31_0
+    ----------------------------------------
+    Total                      1.405ns (0.754ns logic, 0.651ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 5984 / 2016
+-------------------------------------------------------------------------
+Offset:              5.134ns (Levels of Logic = 3)
+  Source:            W_Addr<4> (PAD)
+  Destination:       REG_Files_31_32 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: W_Addr<4> to REG_Files_31_32
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            76   1.222   2.063  W_Addr_4_IBUF (W_Addr_4_IBUF)
+     LUT5:I0->O           20   0.203   1.340  W_Addr[4]_Decoder_9_OUT<19><4>1 (W_Addr[4]_Decoder_9_OUT<19>)
+     LUT4:I0->O            1   0.203   0.000  Mmux_REG_Files[19][31]_C1[1]_mux_22_OUT301 (REG_Files[19][31]_C1[1]_mux_22_OUT<7>)
+     FDCE:D                    0.102          REG_Files_31_391
+    ----------------------------------------
+    Total                      5.134ns (1.730ns logic, 3.404ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 3584 / 64
+-------------------------------------------------------------------------
+Offset:              8.831ns (Levels of Logic = 6)
+  Source:            REG_Files_31_676 (FF)
+  Destination:       LED<4> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: REG_Files_31_676 to LED<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.898  REG_Files_31_676 (REG_Files_31_676)
+     LUT6:I2->O            1   0.203   0.827  Mmux_R_Data_B_986 (Mmux_R_Data_B_917)
+     LUT6:I2->O            2   0.203   0.961  Mmux_R_Data_B_428 (Mmux_R_Data_B_426)
+     LUT5:I0->O            6   0.203   0.849  Mmux_R_Data_B_2_f7_271 (R_Data_B_18_OBUF)
+     LUT6:I4->O            1   0.203   0.684  Mmux_LED102 (Mmux_LED101)
+     LUT4:I2->O            1   0.203   0.579  Mmux_LED103 (LED_4_OBUF)
+     OBUF:I->O                 2.571          LED_4_OBUF (LED<4>)
+    ----------------------------------------
+    Total                      8.831ns (4.033ns logic, 4.798ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 7104 / 64
+-------------------------------------------------------------------------
+Delay:               13.666ns (Levels of Logic = 8)
+  Source:            Write_Reg (PAD)
+  Destination:       LED<4> (PAD)
+
+  Data Path: Write_Reg to LED<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           702   1.222   2.364  Write_Reg_IBUF (Write_Reg_IBUF)
+     LUT3:I0->O          168   0.205   2.389  Mmux_R_Addr_B<1>11 (R_Addr_B<1>)
+     LUT6:I0->O            1   0.203   0.827  Mmux_R_Data_B_986 (Mmux_R_Data_B_917)
+     LUT6:I2->O            2   0.203   0.961  Mmux_R_Data_B_428 (Mmux_R_Data_B_426)
+     LUT5:I0->O            6   0.203   0.849  Mmux_R_Data_B_2_f7_271 (R_Data_B_18_OBUF)
+     LUT6:I4->O            1   0.203   0.684  Mmux_LED102 (Mmux_LED101)
+     LUT4:I2->O            1   0.203   0.579  Mmux_LED103 (LED_4_OBUF)
+     OBUF:I->O                 2.571          LED_4_OBUF (LED<4>)
+    ----------------------------------------
+    Total                     13.666ns (5.013ns logic, 8.653ns route)
+                                       (36.7% logic, 63.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    1.405|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.46 secs
+ 
+--> 
+
+Total memory usage is 300100 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  128 (   0 filtered)
+Number of infos    :  160 (   0 filtered)
+

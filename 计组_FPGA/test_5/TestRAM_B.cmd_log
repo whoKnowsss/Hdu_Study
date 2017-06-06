@@ -1,0 +1,33 @@
+xst -intstyle ise -ifn "C:/Users/Administrator/Desktop/job5/TestRAM_B.xst" -ofn "C:/Users/Administrator/Desktop/job5/TestRAM_B.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc yueshu.ucf -p xc6slx16-csg324-3 TestRAM_B.ngc TestRAM_B.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestRAM_B_map.ncd TestRAM_B.ngd TestRAM_B.pcf 
+par -w -intstyle ise -ol high -mt off TestRAM_B_map.ncd TestRAM_B.ncd TestRAM_B.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestRAM_B.twx TestRAM_B.ncd -o TestRAM_B.twr TestRAM_B.pcf -ucf yueshu.ucf 
+vhdtdtfi -lib work C:/Users/Administrator/Desktop/job5/TestRAM_B.v -lang verilog -prj job5 -o TestRAM_B.spl -module TestRAM_B -template F:/computerclass/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 TestRAM_B.spl C:/Users/Administrator/Desktop/job5/TestRAM_B.sym 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim TestRAM_B.ngc TestRAM_B_synthesis.v 
+bitgen -intstyle ise -f TestRAM_B.ut TestRAM_B.ncd 
+bitgen -intstyle ise -f TestRAM_B.ut TestRAM_B.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc TestRAM_B_C.ucf -p xc6slx16-csg324-3 TestRAM_B.ngc TestRAM_B.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestRAM_B_map.ncd TestRAM_B.ngd TestRAM_B.pcf 
+par -w -intstyle ise -ol high -mt off TestRAM_B_map.ncd TestRAM_B.ncd TestRAM_B.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestRAM_B.twx TestRAM_B.ncd -o TestRAM_B.twr TestRAM_B.pcf -ucf TestRAM_B_C.ucf 
+bitgen -intstyle ise -f TestRAM_B.ut TestRAM_B.ncd 
+xst -intstyle ise -ifn "C:/Users/AhriyzC/Desktop/job5/TestRAM_B.xst" -ofn "C:/Users/AhriyzC/Desktop/job5/TestRAM_B.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc TestRAM_B_C.ucf -p xc6slx16-csg324-3 TestRAM_B.ngc TestRAM_B.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestRAM_B_map.ncd TestRAM_B.ngd TestRAM_B.pcf 
+par -w -intstyle ise -ol high -mt off TestRAM_B_map.ncd TestRAM_B.ncd TestRAM_B.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestRAM_B.twx TestRAM_B.ncd -o TestRAM_B.twr TestRAM_B.pcf -ucf TestRAM_B_C.ucf 
+bitgen -intstyle ise -f TestRAM_B.ut TestRAM_B.ncd 
+xst -intstyle ise -ifn "D:/programing/FPGA/test_5/TestRAM_B.xst" -ofn "D:/programing/FPGA/test_5/TestRAM_B.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc TestRAM_B_C.ucf -p xc6slx16-csg324-3 TestRAM_B.ngc TestRAM_B.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestRAM_B_map.ncd TestRAM_B.ngd TestRAM_B.pcf 
+par -w -intstyle ise -ol high -mt off TestRAM_B_map.ncd TestRAM_B.ncd TestRAM_B.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestRAM_B.twx TestRAM_B.ncd -o TestRAM_B.twr TestRAM_B.pcf -ucf TestRAM_B_C.ucf 
+bitgen -intstyle ise -f TestRAM_B.ut TestRAM_B.ncd 
+xst -intstyle ise -ifn "D:/programing/FPGA/test_5/TestRAM_B.xst" -ofn "D:/programing/FPGA/test_5/TestRAM_B.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc TestRAM_B_C.ucf -p xc6slx16-csg324-3 TestRAM_B.ngc TestRAM_B.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestRAM_B_map.ncd TestRAM_B.ngd TestRAM_B.pcf 
+par -w -intstyle ise -ol high -mt off TestRAM_B_map.ncd TestRAM_B.ncd TestRAM_B.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestRAM_B.twx TestRAM_B.ncd -o TestRAM_B.twr TestRAM_B.pcf -ucf TestRAM_B_C.ucf 
+bitgen -intstyle ise -f TestRAM_B.ut TestRAM_B.ncd 

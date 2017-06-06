@@ -1,0 +1,82 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue May 02 10:38:50 2017
+# Process ID: 13768
+# Log file: D:/programing/FPGA/Test_3/planAhead_run_3/planAhead.log
+# Journal file: D:/programing/FPGA/Test_3/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/programing/FPGA/Test_3/pa.fromHdl.tcl
+# create_project -name Test_3 -dir "D:/programing/FPGA/Test_3/planAhead_run_3" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "test_3.ucf" [current_fileset -constrset]
+Adding file 'D:/programing/FPGA/Test_3/test_3.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {test_3.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top test_3 $srcset
+# add_files [list {test_3.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "D:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "D:/programing/FPGA/Test_3/test_3.v" into library work
+Loading clock regions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from D:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : D:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [D:/programing/FPGA/Test_3/test_3.ucf]
+Finished Parsing UCF File [D:/programing/FPGA/Test_3/test_3.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: d9fd5806
+open_rtl_design: Time (s): elapsed = 00:00:10 . Memory (MB): peak = 659.473 ; gain = 168.773
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T5 [get_ports {ALU_OP[2]}]
+endgroup
+startgroup
+set_property package_pin V8 [get_ports {ALU_OP[1]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {ALU_OP[0]}]
+endgroup
+startgroup
+set_property package_pin N8 [get_ports {AB_SW[2]}]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports {AB_SW[1]}]
+endgroup
+startgroup
+set_property package_pin V9 [get_ports {AB_SW[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  OF]]
+set_property package_pin "" [get_ports [list  {F[31]}]]
+set_property package_pin "" [get_ports [list  {F[31]}]]
+startgroup
+set_property package_pin T11 [get_ports OF]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports ZF]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See D:/programing/FPGA/Test_3\planAhead_pid13768.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue May 02 11:06:22 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue May 02 10:38:50 2017
+# Process ID: 13768
+# Log file: D:/programing/FPGA/Test_3/planAhead_run_3/planAhead.log
+# Journal file: D:/programing/FPGA/Test_3/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/programing/FPGA/Test_3/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T5 [get_ports {ALU_OP[2]}]
+endgroup
+startgroup
+set_property package_pin V8 [get_ports {ALU_OP[1]}]
+endgroup
+startgroup
+set_property package_pin U8 [get_ports {ALU_OP[0]}]
+endgroup
+startgroup
+set_property package_pin N8 [get_ports {AB_SW[2]}]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports {AB_SW[1]}]
+endgroup
+startgroup
+set_property package_pin V9 [get_ports {AB_SW[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  OF]]
+set_property package_pin "" [get_ports [list  {F[31]}]]
+set_property package_pin "" [get_ports [list  {F[31]}]]
+startgroup
+set_property package_pin T11 [get_ports OF]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports ZF]
+endgroup
+save_constraints

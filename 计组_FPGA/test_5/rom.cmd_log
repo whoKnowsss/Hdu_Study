@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Documents and Settings/job5/rom.xst" -ofn "C:/Documents and Settings/job5/rom.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 "rom.ngc" rom.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o rom_map.ncd rom.ngd rom.pcf 

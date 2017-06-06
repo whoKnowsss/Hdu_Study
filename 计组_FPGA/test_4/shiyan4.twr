@@ -1,0 +1,611 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml shiyan4.twx shiyan4.ncd -o shiyan4.twr shiyan4.pcf -ucf
+shiyan4.ucf
+
+Design file:              shiyan4.ncd
+Physical constraint file: shiyan4.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+C1<0>       |    9.454(R)|      SLOW  |   -0.456(R)|      SLOW  |Clk_BUFGP         |   0.000|
+C1<1>       |    7.517(R)|      SLOW  |   -0.757(R)|      SLOW  |Clk_BUFGP         |   0.000|
+Reset       |    6.468(R)|      SLOW  |   -0.276(R)|      SLOW  |Clk_BUFGP         |   0.000|
+W_Addr<0>   |    7.132(R)|      SLOW  |   -0.860(R)|      SLOW  |Clk_BUFGP         |   0.000|
+W_Addr<1>   |    7.253(R)|      SLOW  |   -0.936(R)|      SLOW  |Clk_BUFGP         |   0.000|
+W_Addr<2>   |    8.660(R)|      SLOW  |   -1.150(R)|      SLOW  |Clk_BUFGP         |   0.000|
+W_Addr<3>   |    7.964(R)|      SLOW  |   -0.830(R)|      SLOW  |Clk_BUFGP         |   0.000|
+W_Addr<4>   |    8.527(R)|      SLOW  |   -1.215(R)|      FAST  |Clk_BUFGP         |   0.000|
+Write_Reg   |    5.947(R)|      SLOW  |   -0.323(R)|      SLOW  |Clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock Clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED<0>      |        15.203(R)|      SLOW  |         6.725(R)|      FAST  |Clk_BUFGP         |   0.000|
+LED<1>      |        15.987(R)|      SLOW  |         7.349(R)|      FAST  |Clk_BUFGP         |   0.000|
+LED<2>      |        16.396(R)|      SLOW  |         7.186(R)|      FAST  |Clk_BUFGP         |   0.000|
+LED<3>      |        16.287(R)|      SLOW  |         7.060(R)|      FAST  |Clk_BUFGP         |   0.000|
+LED<4>      |        15.200(R)|      SLOW  |         6.087(R)|      FAST  |Clk_BUFGP         |   0.000|
+LED<5>      |        15.948(R)|      SLOW  |         6.926(R)|      FAST  |Clk_BUFGP         |   0.000|
+LED<6>      |        13.103(R)|      SLOW  |         6.065(R)|      FAST  |Clk_BUFGP         |   0.000|
+LED<7>      |        15.374(R)|      SLOW  |         6.336(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<0> |        11.165(R)|      SLOW  |         5.246(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<1> |        11.095(R)|      SLOW  |         4.946(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<2> |        11.258(R)|      SLOW  |         5.214(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<3> |        12.736(R)|      SLOW  |         6.571(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<4> |        13.208(R)|      SLOW  |         6.428(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<5> |        12.850(R)|      SLOW  |         6.272(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<6> |        13.041(R)|      SLOW  |         6.299(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<7> |        11.958(R)|      SLOW  |         5.607(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<9> |        12.304(R)|      SLOW  |         6.000(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<10>|        10.704(R)|      SLOW  |         5.030(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<11>|        12.691(R)|      SLOW  |         6.376(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<12>|        10.989(R)|      SLOW  |         5.171(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<13>|        10.651(R)|      SLOW  |         5.009(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<14>|        11.686(R)|      SLOW  |         5.556(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<15>|        10.463(R)|      SLOW  |         4.919(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<16>|        10.093(R)|      SLOW  |         4.568(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<17>|        11.208(R)|      SLOW  |         5.401(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<18>|        12.449(R)|      SLOW  |         5.886(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<19>|        10.522(R)|      SLOW  |         4.856(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<20>|        11.444(R)|      SLOW  |         5.553(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<21>|        11.375(R)|      SLOW  |         5.581(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<23>|        11.812(R)|      SLOW  |         5.746(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<24>|        11.127(R)|      SLOW  |         5.433(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<25>|        10.344(R)|      SLOW  |         4.608(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<27>|        10.699(R)|      SLOW  |         4.892(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<28>|        11.992(R)|      SLOW  |         5.677(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<29>|        12.253(R)|      SLOW  |         5.984(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_A<31>|        11.217(R)|      SLOW  |         5.234(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<0> |        10.668(R)|      SLOW  |         4.914(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<1> |        11.570(R)|      SLOW  |         5.179(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<2> |        11.140(R)|      SLOW  |         5.187(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<3> |        12.287(R)|      SLOW  |         6.155(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<4> |        12.934(R)|      SLOW  |         6.055(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<5> |        12.587(R)|      SLOW  |         6.033(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<6> |        13.142(R)|      SLOW  |         6.192(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<7> |        11.676(R)|      SLOW  |         5.616(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<9> |        12.094(R)|      SLOW  |         5.877(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<10>|        12.031(R)|      SLOW  |         5.927(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<11>|        12.180(R)|      SLOW  |         5.963(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<12>|        12.678(R)|      SLOW  |         5.885(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<13>|        12.452(R)|      SLOW  |         5.839(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<14>|        12.712(R)|      SLOW  |         6.018(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<15>|         9.753(R)|      SLOW  |         4.497(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<16>|         9.763(R)|      SLOW  |         4.601(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<17>|        10.322(R)|      SLOW  |         4.775(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<18>|        13.908(R)|      SLOW  |         6.747(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<19>|         9.979(R)|      SLOW  |         4.687(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<20>|        11.262(R)|      SLOW  |         5.288(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<21>|        10.608(R)|      SLOW  |         5.026(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<23>|        10.535(R)|      SLOW  |         4.838(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<24>|        11.041(R)|      SLOW  |         5.135(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<25>|        10.672(R)|      SLOW  |         5.115(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<27>|        10.387(R)|      SLOW  |         5.112(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<28>|        12.089(R)|      SLOW  |         5.715(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<29>|        12.331(R)|      SLOW  |         5.765(R)|      FAST  |Clk_BUFGP         |   0.000|
+R_Data_B<31>|        10.894(R)|      SLOW  |         5.130(R)|      FAST  |Clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    0.990|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+C1<0>          |LED<0>         |   16.245|
+C1<0>          |LED<1>         |   16.095|
+C1<0>          |LED<2>         |   16.032|
+C1<0>          |LED<3>         |   16.357|
+C1<0>          |LED<4>         |   13.784|
+C1<0>          |LED<5>         |   14.083|
+C1<0>          |LED<6>         |   11.647|
+C1<0>          |LED<7>         |   14.050|
+C1<1>          |LED<0>         |   14.738|
+C1<1>          |LED<1>         |   16.861|
+C1<1>          |LED<2>         |   14.409|
+C1<1>          |LED<3>         |   16.915|
+C1<1>          |LED<4>         |   14.428|
+C1<1>          |LED<5>         |   15.357|
+C1<1>          |LED<6>         |   10.396|
+C1<1>          |LED<7>         |   16.847|
+C2             |LED<0>         |   20.690|
+C2             |LED<1>         |   21.913|
+C2             |LED<2>         |   21.559|
+C2             |LED<3>         |   22.764|
+C2             |LED<4>         |   21.923|
+C2             |LED<5>         |   21.547|
+C2             |LED<6>         |   19.728|
+C2             |LED<7>         |   20.673|
+C2             |R_Data_A<0>    |   16.573|
+C2             |R_Data_A<1>    |   16.990|
+C2             |R_Data_A<2>    |   16.489|
+C2             |R_Data_A<3>    |   19.380|
+C2             |R_Data_A<4>    |   19.975|
+C2             |R_Data_A<5>    |   19.295|
+C2             |R_Data_A<6>    |   19.808|
+C2             |R_Data_A<7>    |   15.503|
+C2             |R_Data_A<9>    |   16.784|
+C2             |R_Data_A<10>   |   17.022|
+C2             |R_Data_A<11>   |   18.082|
+C2             |R_Data_A<12>   |   17.467|
+C2             |R_Data_A<13>   |   16.516|
+C2             |R_Data_A<14>   |   18.453|
+C2             |R_Data_A<15>   |   16.626|
+C2             |R_Data_A<16>   |   16.216|
+C2             |R_Data_A<17>   |   16.773|
+C2             |R_Data_A<18>   |   19.216|
+C2             |R_Data_A<19>   |   16.575|
+C2             |R_Data_A<20>   |   16.499|
+C2             |R_Data_A<21>   |   16.628|
+C2             |R_Data_A<23>   |   16.658|
+C2             |R_Data_A<24>   |   15.977|
+C2             |R_Data_A<25>   |   16.278|
+C2             |R_Data_A<27>   |   16.189|
+C2             |R_Data_A<28>   |   18.411|
+C2             |R_Data_A<29>   |   18.118|
+C2             |R_Data_A<31>   |   14.762|
+C2             |R_Data_B<0>    |   16.090|
+C2             |R_Data_B<1>    |   17.496|
+C2             |R_Data_B<2>    |   16.414|
+C2             |R_Data_B<3>    |   18.647|
+C2             |R_Data_B<4>    |   18.090|
+C2             |R_Data_B<5>    |   18.210|
+C2             |R_Data_B<6>    |   18.298|
+C2             |R_Data_B<7>    |   15.555|
+C2             |R_Data_B<9>    |   16.466|
+C2             |R_Data_B<10>   |   18.329|
+C2             |R_Data_B<11>   |   17.712|
+C2             |R_Data_B<12>   |   18.284|
+C2             |R_Data_B<13>   |   17.721|
+C2             |R_Data_B<14>   |   18.045|
+C2             |R_Data_B<15>   |   16.194|
+C2             |R_Data_B<16>   |   16.610|
+C2             |R_Data_B<17>   |   16.153|
+C2             |R_Data_B<18>   |   19.064|
+C2             |R_Data_B<19>   |   16.512|
+C2             |R_Data_B<20>   |   16.525|
+C2             |R_Data_B<21>   |   15.996|
+C2             |R_Data_B<23>   |   15.379|
+C2             |R_Data_B<24>   |   16.033|
+C2             |R_Data_B<25>   |   16.396|
+C2             |R_Data_B<27>   |   16.311|
+C2             |R_Data_B<28>   |   17.770|
+C2             |R_Data_B<29>   |   17.423|
+C2             |R_Data_B<31>   |   14.812|
+W_Addr<0>      |LED<0>         |   19.637|
+W_Addr<0>      |LED<1>         |   20.812|
+W_Addr<0>      |LED<2>         |   20.614|
+W_Addr<0>      |LED<3>         |   21.819|
+W_Addr<0>      |LED<4>         |   20.978|
+W_Addr<0>      |LED<5>         |   20.602|
+W_Addr<0>      |LED<6>         |   18.783|
+W_Addr<0>      |LED<7>         |   19.728|
+W_Addr<0>      |R_Data_A<0>    |   15.628|
+W_Addr<0>      |R_Data_A<1>    |   16.045|
+W_Addr<0>      |R_Data_A<2>    |   15.544|
+W_Addr<0>      |R_Data_A<3>    |   18.435|
+W_Addr<0>      |R_Data_A<4>    |   19.030|
+W_Addr<0>      |R_Data_A<5>    |   18.350|
+W_Addr<0>      |R_Data_A<6>    |   18.863|
+W_Addr<0>      |R_Data_A<7>    |   14.558|
+W_Addr<0>      |R_Data_A<9>    |   15.839|
+W_Addr<0>      |R_Data_A<10>   |   16.077|
+W_Addr<0>      |R_Data_A<11>   |   17.137|
+W_Addr<0>      |R_Data_A<12>   |   16.522|
+W_Addr<0>      |R_Data_A<13>   |   15.571|
+W_Addr<0>      |R_Data_A<14>   |   17.508|
+W_Addr<0>      |R_Data_A<15>   |   15.681|
+W_Addr<0>      |R_Data_A<16>   |   15.271|
+W_Addr<0>      |R_Data_A<17>   |   15.828|
+W_Addr<0>      |R_Data_A<18>   |   18.271|
+W_Addr<0>      |R_Data_A<19>   |   15.630|
+W_Addr<0>      |R_Data_A<20>   |   15.554|
+W_Addr<0>      |R_Data_A<21>   |   15.683|
+W_Addr<0>      |R_Data_A<23>   |   15.713|
+W_Addr<0>      |R_Data_A<24>   |   15.032|
+W_Addr<0>      |R_Data_A<25>   |   15.333|
+W_Addr<0>      |R_Data_A<27>   |   15.244|
+W_Addr<0>      |R_Data_A<28>   |   17.466|
+W_Addr<0>      |R_Data_A<29>   |   17.173|
+W_Addr<0>      |R_Data_A<31>   |   13.817|
+W_Addr<0>      |R_Data_B<0>    |   15.145|
+W_Addr<0>      |R_Data_B<1>    |   16.395|
+W_Addr<0>      |R_Data_B<2>    |   15.469|
+W_Addr<0>      |R_Data_B<3>    |   17.702|
+W_Addr<0>      |R_Data_B<4>    |   17.145|
+W_Addr<0>      |R_Data_B<5>    |   17.265|
+W_Addr<0>      |R_Data_B<6>    |   17.353|
+W_Addr<0>      |R_Data_B<7>    |   14.581|
+W_Addr<0>      |R_Data_B<9>    |   15.521|
+W_Addr<0>      |R_Data_B<10>   |   17.349|
+W_Addr<0>      |R_Data_B<11>   |   16.767|
+W_Addr<0>      |R_Data_B<12>   |   17.339|
+W_Addr<0>      |R_Data_B<13>   |   16.776|
+W_Addr<0>      |R_Data_B<14>   |   17.100|
+W_Addr<0>      |R_Data_B<15>   |   15.249|
+W_Addr<0>      |R_Data_B<16>   |   15.557|
+W_Addr<0>      |R_Data_B<17>   |   15.208|
+W_Addr<0>      |R_Data_B<18>   |   18.119|
+W_Addr<0>      |R_Data_B<19>   |   15.275|
+W_Addr<0>      |R_Data_B<20>   |   15.580|
+W_Addr<0>      |R_Data_B<21>   |   14.725|
+W_Addr<0>      |R_Data_B<23>   |   14.434|
+W_Addr<0>      |R_Data_B<24>   |   14.648|
+W_Addr<0>      |R_Data_B<25>   |   15.330|
+W_Addr<0>      |R_Data_B<27>   |   15.366|
+W_Addr<0>      |R_Data_B<28>   |   16.825|
+W_Addr<0>      |R_Data_B<29>   |   16.478|
+W_Addr<0>      |R_Data_B<31>   |   13.867|
+W_Addr<1>      |LED<0>         |   20.521|
+W_Addr<1>      |LED<1>         |   21.744|
+W_Addr<1>      |LED<2>         |   20.718|
+W_Addr<1>      |LED<3>         |   22.224|
+W_Addr<1>      |LED<4>         |   20.524|
+W_Addr<1>      |LED<5>         |   21.265|
+W_Addr<1>      |LED<6>         |   18.329|
+W_Addr<1>      |LED<7>         |   20.354|
+W_Addr<1>      |R_Data_A<0>    |   15.715|
+W_Addr<1>      |R_Data_A<1>    |   16.761|
+W_Addr<1>      |R_Data_A<2>    |   15.631|
+W_Addr<1>      |R_Data_A<3>    |   18.322|
+W_Addr<1>      |R_Data_A<4>    |   18.576|
+W_Addr<1>      |R_Data_A<5>    |   18.598|
+W_Addr<1>      |R_Data_A<6>    |   18.409|
+W_Addr<1>      |R_Data_A<7>    |   14.970|
+W_Addr<1>      |R_Data_A<9>    |   15.895|
+W_Addr<1>      |R_Data_A<10>   |   16.756|
+W_Addr<1>      |R_Data_A<11>   |   17.336|
+W_Addr<1>      |R_Data_A<12>   |   16.934|
+W_Addr<1>      |R_Data_A<13>   |   15.615|
+W_Addr<1>      |R_Data_A<14>   |   17.054|
+W_Addr<1>      |R_Data_A<15>   |   15.686|
+W_Addr<1>      |R_Data_A<16>   |   15.348|
+W_Addr<1>      |R_Data_A<17>   |   16.210|
+W_Addr<1>      |R_Data_A<18>   |   17.817|
+W_Addr<1>      |R_Data_A<19>   |   15.692|
+W_Addr<1>      |R_Data_A<20>   |   16.304|
+W_Addr<1>      |R_Data_A<21>   |   16.329|
+W_Addr<1>      |R_Data_A<23>   |   16.239|
+W_Addr<1>      |R_Data_A<24>   |   15.796|
+W_Addr<1>      |R_Data_A<25>   |   15.077|
+W_Addr<1>      |R_Data_A<27>   |   15.433|
+W_Addr<1>      |R_Data_A<28>   |   17.779|
+W_Addr<1>      |R_Data_A<29>   |   17.135|
+W_Addr<1>      |R_Data_A<31>   |   14.354|
+W_Addr<1>      |R_Data_B<0>    |   15.198|
+W_Addr<1>      |R_Data_B<1>    |   17.327|
+W_Addr<1>      |R_Data_B<2>    |   15.522|
+W_Addr<1>      |R_Data_B<3>    |   18.433|
+W_Addr<1>      |R_Data_B<4>    |   17.297|
+W_Addr<1>      |R_Data_B<5>    |   17.943|
+W_Addr<1>      |R_Data_B<6>    |   17.505|
+W_Addr<1>      |R_Data_B<7>    |   15.386|
+W_Addr<1>      |R_Data_B<9>    |   15.977|
+W_Addr<1>      |R_Data_B<10>   |   18.160|
+W_Addr<1>      |R_Data_B<11>   |   17.265|
+W_Addr<1>      |R_Data_B<12>   |   17.951|
+W_Addr<1>      |R_Data_B<13>   |   17.206|
+W_Addr<1>      |R_Data_B<14>   |   17.252|
+W_Addr<1>      |R_Data_B<15>   |   15.875|
+W_Addr<1>      |R_Data_B<16>   |   16.441|
+W_Addr<1>      |R_Data_B<17>   |   15.969|
+W_Addr<1>      |R_Data_B<18>   |   18.271|
+W_Addr<1>      |R_Data_B<19>   |   16.343|
+W_Addr<1>      |R_Data_B<20>   |   16.231|
+W_Addr<1>      |R_Data_B<21>   |   15.827|
+W_Addr<1>      |R_Data_B<23>   |   14.978|
+W_Addr<1>      |R_Data_B<24>   |   15.864|
+W_Addr<1>      |R_Data_B<25>   |   16.227|
+W_Addr<1>      |R_Data_B<27>   |   15.990|
+W_Addr<1>      |R_Data_B<28>   |   17.503|
+W_Addr<1>      |R_Data_B<29>   |   17.050|
+W_Addr<1>      |R_Data_B<31>   |   14.604|
+W_Addr<2>      |LED<0>         |   18.140|
+W_Addr<2>      |LED<1>         |   19.284|
+W_Addr<2>      |LED<2>         |   19.424|
+W_Addr<2>      |LED<3>         |   20.077|
+W_Addr<2>      |LED<4>         |   18.231|
+W_Addr<2>      |LED<5>         |   19.435|
+W_Addr<2>      |LED<6>         |   16.172|
+W_Addr<2>      |LED<7>         |   19.199|
+W_Addr<2>      |R_Data_A<0>    |   13.764|
+W_Addr<2>      |R_Data_A<1>    |   13.395|
+W_Addr<2>      |R_Data_A<2>    |   13.680|
+W_Addr<2>      |R_Data_A<3>    |   15.723|
+W_Addr<2>      |R_Data_A<4>    |   16.283|
+W_Addr<2>      |R_Data_A<5>    |   16.600|
+W_Addr<2>      |R_Data_A<6>    |   16.116|
+W_Addr<2>      |R_Data_A<7>    |   14.421|
+W_Addr<2>      |R_Data_A<9>    |   15.221|
+W_Addr<2>      |R_Data_A<10>   |   13.455|
+W_Addr<2>      |R_Data_A<11>   |   15.167|
+W_Addr<2>      |R_Data_A<12>   |   12.860|
+W_Addr<2>      |R_Data_A<13>   |   13.231|
+W_Addr<2>      |R_Data_A<14>   |   14.761|
+W_Addr<2>      |R_Data_A<15>   |   14.781|
+W_Addr<2>      |R_Data_A<16>   |   13.446|
+W_Addr<2>      |R_Data_A<17>   |   14.851|
+W_Addr<2>      |R_Data_A<18>   |   15.524|
+W_Addr<2>      |R_Data_A<19>   |   13.943|
+W_Addr<2>      |R_Data_A<20>   |   15.047|
+W_Addr<2>      |R_Data_A<21>   |   15.265|
+W_Addr<2>      |R_Data_A<23>   |   15.688|
+W_Addr<2>      |R_Data_A<24>   |   14.288|
+W_Addr<2>      |R_Data_A<25>   |   12.643|
+W_Addr<2>      |R_Data_A<27>   |   13.489|
+W_Addr<2>      |R_Data_A<28>   |   15.716|
+W_Addr<2>      |R_Data_A<29>   |   14.826|
+W_Addr<2>      |R_Data_A<31>   |   13.680|
+W_Addr<2>      |R_Data_B<0>    |   13.441|
+W_Addr<2>      |R_Data_B<1>    |   14.065|
+W_Addr<2>      |R_Data_B<2>    |   13.913|
+W_Addr<2>      |R_Data_B<3>    |   16.286|
+W_Addr<2>      |R_Data_B<4>    |   16.003|
+W_Addr<2>      |R_Data_B<5>    |   16.113|
+W_Addr<2>      |R_Data_B<6>    |   16.211|
+W_Addr<2>      |R_Data_B<7>    |   13.848|
+W_Addr<2>      |R_Data_B<9>    |   15.167|
+W_Addr<2>      |R_Data_B<10>   |   14.740|
+W_Addr<2>      |R_Data_B<11>   |   14.671|
+W_Addr<2>      |R_Data_B<12>   |   13.964|
+W_Addr<2>      |R_Data_B<13>   |   14.169|
+W_Addr<2>      |R_Data_B<14>   |   15.781|
+W_Addr<2>      |R_Data_B<15>   |   14.720|
+W_Addr<2>      |R_Data_B<16>   |   14.060|
+W_Addr<2>      |R_Data_B<17>   |   14.462|
+W_Addr<2>      |R_Data_B<18>   |   16.977|
+W_Addr<2>      |R_Data_B<19>   |   14.387|
+W_Addr<2>      |R_Data_B<20>   |   14.198|
+W_Addr<2>      |R_Data_B<21>   |   13.657|
+W_Addr<2>      |R_Data_B<23>   |   13.773|
+W_Addr<2>      |R_Data_B<24>   |   13.526|
+W_Addr<2>      |R_Data_B<25>   |   13.804|
+W_Addr<2>      |R_Data_B<27>   |   13.488|
+W_Addr<2>      |R_Data_B<28>   |   15.673|
+W_Addr<2>      |R_Data_B<29>   |   14.048|
+W_Addr<2>      |R_Data_B<31>   |   13.073|
+W_Addr<3>      |LED<0>         |   17.366|
+W_Addr<3>      |LED<1>         |   18.422|
+W_Addr<3>      |LED<2>         |   19.388|
+W_Addr<3>      |LED<3>         |   19.402|
+W_Addr<3>      |LED<4>         |   18.016|
+W_Addr<3>      |LED<5>         |   19.108|
+W_Addr<3>      |LED<6>         |   16.222|
+W_Addr<3>      |LED<7>         |   17.752|
+W_Addr<3>      |R_Data_A<0>    |   13.032|
+W_Addr<3>      |R_Data_A<1>    |   12.509|
+W_Addr<3>      |R_Data_A<2>    |   13.125|
+W_Addr<3>      |R_Data_A<3>    |   15.195|
+W_Addr<3>      |R_Data_A<4>    |   15.971|
+W_Addr<3>      |R_Data_A<5>    |   16.303|
+W_Addr<3>      |R_Data_A<6>    |   15.804|
+W_Addr<3>      |R_Data_A<7>    |   13.827|
+W_Addr<3>      |R_Data_A<9>    |   14.628|
+W_Addr<3>      |R_Data_A<10>   |   13.356|
+W_Addr<3>      |R_Data_A<11>   |   15.366|
+W_Addr<3>      |R_Data_A<12>   |   12.305|
+W_Addr<3>      |R_Data_A<13>   |   12.918|
+W_Addr<3>      |R_Data_A<14>   |   14.449|
+W_Addr<3>      |R_Data_A<15>   |   14.352|
+W_Addr<3>      |R_Data_A<16>   |   13.131|
+W_Addr<3>      |R_Data_A<17>   |   14.527|
+W_Addr<3>      |R_Data_A<18>   |   15.212|
+W_Addr<3>      |R_Data_A<19>   |   13.797|
+W_Addr<3>      |R_Data_A<20>   |   14.254|
+W_Addr<3>      |R_Data_A<21>   |   14.658|
+W_Addr<3>      |R_Data_A<23>   |   14.728|
+W_Addr<3>      |R_Data_A<24>   |   13.786|
+W_Addr<3>      |R_Data_A<25>   |   12.166|
+W_Addr<3>      |R_Data_A<27>   |   12.515|
+W_Addr<3>      |R_Data_A<28>   |   15.484|
+W_Addr<3>      |R_Data_A<29>   |   14.520|
+W_Addr<3>      |R_Data_A<31>   |   13.262|
+W_Addr<3>      |R_Data_B<0>    |   12.607|
+W_Addr<3>      |R_Data_B<1>    |   12.726|
+W_Addr<3>      |R_Data_B<2>    |   13.079|
+W_Addr<3>      |R_Data_B<3>    |   15.611|
+W_Addr<3>      |R_Data_B<4>    |   15.967|
+W_Addr<3>      |R_Data_B<5>    |   15.786|
+W_Addr<3>      |R_Data_B<6>    |   16.175|
+W_Addr<3>      |R_Data_B<7>    |   13.536|
+W_Addr<3>      |R_Data_B<9>    |   14.104|
+W_Addr<3>      |R_Data_B<10>   |   13.969|
+W_Addr<3>      |R_Data_B<11>   |   14.190|
+W_Addr<3>      |R_Data_B<12>   |   13.753|
+W_Addr<3>      |R_Data_B<13>   |   13.881|
+W_Addr<3>      |R_Data_B<14>   |   15.922|
+W_Addr<3>      |R_Data_B<15>   |   13.273|
+W_Addr<3>      |R_Data_B<16>   |   13.286|
+W_Addr<3>      |R_Data_B<17>   |   13.600|
+W_Addr<3>      |R_Data_B<18>   |   16.941|
+W_Addr<3>      |R_Data_B<19>   |   13.121|
+W_Addr<3>      |R_Data_B<20>   |   13.578|
+W_Addr<3>      |R_Data_B<21>   |   13.370|
+W_Addr<3>      |R_Data_B<23>   |   13.486|
+W_Addr<3>      |R_Data_B<24>   |   12.949|
+W_Addr<3>      |R_Data_B<25>   |   13.493|
+W_Addr<3>      |R_Data_B<27>   |   12.433|
+W_Addr<3>      |R_Data_B<28>   |   15.176|
+W_Addr<3>      |R_Data_B<29>   |   13.760|
+W_Addr<3>      |R_Data_B<31>   |   12.754|
+W_Addr<4>      |LED<0>         |   18.789|
+W_Addr<4>      |LED<1>         |   19.478|
+W_Addr<4>      |LED<2>         |   17.558|
+W_Addr<4>      |LED<3>         |   20.349|
+W_Addr<4>      |LED<4>         |   19.233|
+W_Addr<4>      |LED<5>         |   19.357|
+W_Addr<4>      |LED<6>         |   16.838|
+W_Addr<4>      |LED<7>         |   18.910|
+W_Addr<4>      |R_Data_A<0>    |   13.795|
+W_Addr<4>      |R_Data_A<1>    |   13.734|
+W_Addr<4>      |R_Data_A<2>    |   12.284|
+W_Addr<4>      |R_Data_A<3>    |   16.965|
+W_Addr<4>      |R_Data_A<4>    |   11.979|
+W_Addr<4>      |R_Data_A<5>    |   13.076|
+W_Addr<4>      |R_Data_A<6>    |   11.812|
+W_Addr<4>      |R_Data_A<7>    |   12.916|
+W_Addr<4>      |R_Data_A<9>    |   16.531|
+W_Addr<4>      |R_Data_A<10>   |   14.120|
+W_Addr<4>      |R_Data_A<11>   |   15.837|
+W_Addr<4>      |R_Data_A<12>   |   13.403|
+W_Addr<4>      |R_Data_A<13>   |   13.555|
+W_Addr<4>      |R_Data_A<14>   |   15.824|
+W_Addr<4>      |R_Data_A<15>   |   15.625|
+W_Addr<4>      |R_Data_A<16>   |   14.453|
+W_Addr<4>      |R_Data_A<17>   |   15.886|
+W_Addr<4>      |R_Data_A<18>   |   11.220|
+W_Addr<4>      |R_Data_A<19>   |   14.993|
+W_Addr<4>      |R_Data_A<20>   |   15.805|
+W_Addr<4>      |R_Data_A<21>   |   16.315|
+W_Addr<4>      |R_Data_A<23>   |   16.586|
+W_Addr<4>      |R_Data_A<24>   |   15.709|
+W_Addr<4>      |R_Data_A<25>   |   13.650|
+W_Addr<4>      |R_Data_A<27>   |   13.447|
+W_Addr<4>      |R_Data_A<28>   |   16.775|
+W_Addr<4>      |R_Data_A<29>   |   12.897|
+W_Addr<4>      |R_Data_A<31>   |   14.670|
+W_Addr<4>      |R_Data_B<0>    |   13.848|
+W_Addr<4>      |R_Data_B<1>    |   14.246|
+W_Addr<4>      |R_Data_B<2>    |   12.364|
+W_Addr<4>      |R_Data_B<3>    |   16.546|
+W_Addr<4>      |R_Data_B<4>    |   11.722|
+W_Addr<4>      |R_Data_B<5>    |   11.037|
+W_Addr<4>      |R_Data_B<6>    |   11.930|
+W_Addr<4>      |R_Data_B<7>    |   12.694|
+W_Addr<4>      |R_Data_B<9>    |   15.099|
+W_Addr<4>      |R_Data_B<10>   |   15.109|
+W_Addr<4>      |R_Data_B<11>   |   15.596|
+W_Addr<4>      |R_Data_B<12>   |   14.748|
+W_Addr<4>      |R_Data_B<13>   |   15.367|
+W_Addr<4>      |R_Data_B<14>   |   16.049|
+W_Addr<4>      |R_Data_B<15>   |   13.902|
+W_Addr<4>      |R_Data_B<16>   |   13.612|
+W_Addr<4>      |R_Data_B<17>   |   13.953|
+W_Addr<4>      |R_Data_B<18>   |   12.696|
+W_Addr<4>      |R_Data_B<19>   |   13.772|
+W_Addr<4>      |R_Data_B<20>   |   14.043|
+W_Addr<4>      |R_Data_B<21>   |   13.865|
+W_Addr<4>      |R_Data_B<23>   |   14.154|
+W_Addr<4>      |R_Data_B<24>   |   14.299|
+W_Addr<4>      |R_Data_B<25>   |   13.957|
+W_Addr<4>      |R_Data_B<27>   |   13.530|
+W_Addr<4>      |R_Data_B<28>   |   16.150|
+W_Addr<4>      |R_Data_B<29>   |   12.319|
+W_Addr<4>      |R_Data_B<31>   |   13.651|
+Write_Reg      |LED<0>         |   20.225|
+Write_Reg      |LED<1>         |   21.448|
+Write_Reg      |LED<2>         |   20.668|
+Write_Reg      |LED<3>         |   21.928|
+Write_Reg      |LED<4>         |   21.032|
+Write_Reg      |LED<5>         |   20.969|
+Write_Reg      |LED<6>         |   18.837|
+Write_Reg      |LED<7>         |   20.058|
+Write_Reg      |R_Data_A<0>    |   15.682|
+Write_Reg      |R_Data_A<1>    |   16.465|
+Write_Reg      |R_Data_A<2>    |   15.598|
+Write_Reg      |R_Data_A<3>    |   18.489|
+Write_Reg      |R_Data_A<4>    |   19.084|
+Write_Reg      |R_Data_A<5>    |   18.404|
+Write_Reg      |R_Data_A<6>    |   18.917|
+Write_Reg      |R_Data_A<7>    |   14.674|
+Write_Reg      |R_Data_A<9>    |   16.366|
+Write_Reg      |R_Data_A<10>   |   16.460|
+Write_Reg      |R_Data_A<11>   |   17.191|
+Write_Reg      |R_Data_A<12>   |   16.638|
+Write_Reg      |R_Data_A<13>   |   15.625|
+Write_Reg      |R_Data_A<14>   |   17.562|
+Write_Reg      |R_Data_A<15>   |   15.735|
+Write_Reg      |R_Data_A<16>   |   15.325|
+Write_Reg      |R_Data_A<17>   |   15.914|
+Write_Reg      |R_Data_A<18>   |   18.325|
+Write_Reg      |R_Data_A<19>   |   15.684|
+Write_Reg      |R_Data_A<20>   |   16.008|
+Write_Reg      |R_Data_A<21>   |   16.150|
+Write_Reg      |R_Data_A<23>   |   16.421|
+Write_Reg      |R_Data_A<24>   |   15.544|
+Write_Reg      |R_Data_A<25>   |   15.387|
+Write_Reg      |R_Data_A<27>   |   15.298|
+Write_Reg      |R_Data_A<28>   |   17.520|
+Write_Reg      |R_Data_A<29>   |   17.227|
+Write_Reg      |R_Data_A<31>   |   14.505|
+Write_Reg      |R_Data_B<0>    |   15.199|
+Write_Reg      |R_Data_B<1>    |   17.031|
+Write_Reg      |R_Data_B<2>    |   15.523|
+Write_Reg      |R_Data_B<3>    |   18.137|
+Write_Reg      |R_Data_B<4>    |   17.199|
+Write_Reg      |R_Data_B<5>    |   17.647|
+Write_Reg      |R_Data_B<6>    |   17.407|
+Write_Reg      |R_Data_B<7>    |   15.090|
+Write_Reg      |R_Data_B<9>    |   15.681|
+Write_Reg      |R_Data_B<10>   |   17.864|
+Write_Reg      |R_Data_B<11>   |   16.969|
+Write_Reg      |R_Data_B<12>   |   17.655|
+Write_Reg      |R_Data_B<13>   |   16.910|
+Write_Reg      |R_Data_B<14>   |   17.154|
+Write_Reg      |R_Data_B<15>   |   15.579|
+Write_Reg      |R_Data_B<16>   |   16.145|
+Write_Reg      |R_Data_B<17>   |   15.673|
+Write_Reg      |R_Data_B<18>   |   18.173|
+Write_Reg      |R_Data_B<19>   |   16.047|
+Write_Reg      |R_Data_B<20>   |   15.935|
+Write_Reg      |R_Data_B<21>   |   15.531|
+Write_Reg      |R_Data_B<23>   |   14.682|
+Write_Reg      |R_Data_B<24>   |   15.568|
+Write_Reg      |R_Data_B<25>   |   15.931|
+Write_Reg      |R_Data_B<27>   |   15.694|
+Write_Reg      |R_Data_B<28>   |   17.207|
+Write_Reg      |R_Data_B<29>   |   16.754|
+Write_Reg      |R_Data_B<31>   |   14.308|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Jun 06 12:00:27 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 264 MB
+
+
+

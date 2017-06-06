@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/programing/FPGA/test1/test1.xst" -ofn "D:/programing/FPGA/test1/test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc test1.ucf -p xc6slx16-csg324-3 test1.ngc test1.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test1_map.ncd test1.ngd test1.pcf 
+par -w -intstyle ise -ol high -mt off test1_map.ncd test1.ncd test1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test1.twx test1.ncd -o test1.twr test1.pcf -ucf test1.ucf 
+bitgen -intstyle ise -f test1.ut test1.ncd 
+xst -intstyle ise -ifn "D:/programing/FPGA/test1/test1.xst" -ofn "D:/programing/FPGA/test1/test1.syr" 

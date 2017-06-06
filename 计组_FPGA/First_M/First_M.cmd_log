@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/programing/FPGA/First_M/First_M.xst" -ofn "D:/programing/FPGA/First_M/First_M.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 First_M.ngc First_M.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o First_M_map.ncd First_M.ngd First_M.pcf 
+par -w -intstyle ise -ol high -mt off First_M_map.ncd First_M.ncd First_M.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml First_M.twx First_M.ncd -o First_M.twr First_M.pcf 
+bitgen -intstyle ise -f First_M.ut First_M.ncd 

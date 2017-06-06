@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "D:/programing/FPGA/Test_2/Test_2.xst" -ofn "D:/programing/FPGA/Test_2/Test_2.syr" 
+xst -intstyle ise -ifn "D:/programing/FPGA/Test_2/Test_2.xst" -ofn "D:/programing/FPGA/Test_2/Test_2.syr" 
+xst -intstyle ise -ifn "D:/programing/FPGA/Test_2/Test_2.xst" -ofn "D:/programing/FPGA/Test_2/Test_2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 Test_2.ngc Test_2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Test_2_map.ncd Test_2.ngd Test_2.pcf 
+par -w -intstyle ise -ol high -mt off Test_2_map.ncd Test_2.ncd Test_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Test_2.twx Test_2.ncd -o Test_2.twr Test_2.pcf 
+bitgen -intstyle ise -f Test_2.ut Test_2.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test_2_gj.ucf -p xc6slx16-csg324-3 Test_2.ngc Test_2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Test_2_map.ncd Test_2.ngd Test_2.pcf 
+par -w -intstyle ise -ol high -mt off Test_2_map.ncd Test_2.ncd Test_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Test_2.twx Test_2.ncd -o Test_2.twr Test_2.pcf -ucf Test_2_gj.ucf 
+xst -intstyle ise -ifn "D:/programing/FPGA/Test_2/Test_2.xst" -ofn "D:/programing/FPGA/Test_2/Test_2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Test_2_gj.ucf -p xc6slx16-csg324-3 Test_2.ngc Test_2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Test_2_map.ncd Test_2.ngd Test_2.pcf 
+par -w -intstyle ise -ol high -mt off Test_2_map.ncd Test_2.ncd Test_2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Test_2.twx Test_2.ncd -o Test_2.twr Test_2.pcf -ucf Test_2_gj.ucf 
+bitgen -intstyle ise -f Test_2.ut Test_2.ncd 
