@@ -1,0 +1,18 @@
+.title {
+    color: red;
+    text-align: center;
+    font-size: 30px;
+}
+
+.speHref{
+    color: blue;
+    font-size: 10px;
+}
+.speHref:hover{
+    color:green;
+    font-size: 16px;
+}
+.speHref:visited{
+    color: red;
+    font-size: 10px;
+}

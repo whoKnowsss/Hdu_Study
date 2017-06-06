@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<label id="1">I am a girl, I like dancing!</label><br>
+<label id="2">非正则</label><br>
+<label id="3">正则</label><br>
+<input type="button" onclick="huan1()" value="非正则转化">
+<input type="button" onclick="huan2()" value="正则转化">
+</body>
+<script language="javascript">
+ function huan1() {                                               //非正则
+     var sum=0;
+     var word=document.getElementById("1").innerHTML;
+     var newWord="";
+     for(var i=1;i<=word.length;i++)
+     {
+         newWord+=word.charAt(i-1);
+        if(i!=word.length)
+        { newWord+="#";
+         sum++;}
+     }
+     document.getElementById("2").innerHTML+=":"+newWord+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp#的个数是:"+sum;
+ }
+ function huan2() {                                              //正则
+     var word=document.getElementById("1").innerHTML;
+     var newWord=word.replace(/(.(?=.))/g,"$1#");
+     var sum=word.match(/.(?=.)/g).length;
+     document.getElementById("3").innerHTML+=":&nbsp&nbsp&nbsp&nbsp"+newWord+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp#的个数是:"+sum;
+ }
+
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<form name="frm">
+    <label for="email">邮箱</label><input type="text" name="email" id="email"><br>
+    <label for="name">用户名</label><input type="text" name="name" id="name"><br>
+    <label for="p1">密码</label><input type="password" name="p1" id="p1"><br>
+    <label for="p2">确认密码</label><input type="password" name="p2" id="p2"><br>
+    <label for="city">城市</label>
+
+    <select id="city" name="city">
+        <option>北京</option>
+        <option selected>杭州</option>
+        <option>上海</option>
+
+    </select><br>
+    <label>爱好</label>
+    <input type="checkbox"  name="hobby" value="跑步">跑步
+    <input type="checkbox"  name="hobby" value="打篮球">打篮球
+   <br>
+    <label >性别</label>
+    <input type="radio" name="sex">男
+    <input type="radio" name="sex">女
+    <br>
+    <label for="jieshao">个人介绍</label> <textarea id="jieshao" name="jieshao"></textarea><br>
+    <input type="submit" value="确认" onclick="yanzheng()">
+    <input type="reset" value="重置">
+</form>
+</body>
+<script language="JavaScript">
+    function yanzheng() {
+        var regNameStr = /^\s*\w{6,10}\s*$/;
+        var regEmailStr = /^\s*\w+@\w+\s*$/;
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+        var p1 = document.getElementById("p1").value;
+        var p2 = document.getElementById("p2").value;
+        if (frm.email.value.trim() =="") {
+            alert("邮箱不能为空！");
+            return false;
+        }
+        else if (!regEmailStr.test(email)) {
+            alert("邮箱格式错误");
+            return false;
+        }
+        else if (name.trim() == "") {
+            alert("名称不能为空！");
+            return false;
+        }
+        else if (!regNameStr.test(name)) {
+            alert("名称格式错误，长度6到10位");
+            return false;
+        }
+        else if (p1.trim() == "") {
+            alert("请输入密码");
+            return false;
+        }
+        else if (p2.trim() == "") {
+            alert("请输入确认密码");
+            return false;
+        }
+        else if (p1 != p2) {
+            alert("密码和确认密码不一样！");
+            return false;
+        }
+
+    }
+</script>
+</html>

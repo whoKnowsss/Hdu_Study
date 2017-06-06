@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+  <input type="button" onclick="q()" value="时间">
+</body>
+<script language="javascript">
+    function q() {
+        var a=new Date().getHours().toString();
+        if (a>=6&&a<12)
+            alert("早上好");
+        if(a>=12&&a<18)
+            alert("下午好");
+        if(a>=18&&a<24)
+            alert("晚上好");
+        if(a>=0&&a<6)
+            alsert("凌晨好");
+    }
+</script>
+</html>
