@@ -1,0 +1,9 @@
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\bin\Debug\testWin.exe
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\bin\Debug\testWin.pdb
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\obj\x86\Debug\testWin.Form1.resources
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\obj\x86\Debug\testWin.Properties.Resources.resources
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\obj\x86\Debug\testWin.exe
+c:\documents and settings\rjxy\my documents\visual studio 2010\Projects\testWin\testWin\obj\x86\Debug\testWin.pdb

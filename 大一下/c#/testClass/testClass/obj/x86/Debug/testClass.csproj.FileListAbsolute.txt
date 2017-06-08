@@ -1,0 +1,10 @@
+C:\WebDev\testClass\testClass\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\WebDev\testClass\testClass\bin\Debug\testClass.exe
+C:\WebDev\testClass\testClass\bin\Debug\testClass.pdb
+C:\WebDev\testClass\testClass\obj\x86\Debug\testClass.exe
+C:\WebDev\testClass\testClass\obj\x86\Debug\testClass.pdb
+C:\Documents and Settings\RJXY\桌面\testClass\testClass\obj\x86\Debug\testClass.exe
+C:\Documents and Settings\RJXY\桌面\testClass\testClass\obj\x86\Debug\testClass.pdb
+C:\Documents and Settings\RJXY\桌面\testClass\testClass\bin\Debug\testClass.exe
+C:\Documents and Settings\RJXY\桌面\testClass\testClass\bin\Debug\testClass.pdb
+C:\Documents and Settings\RJXY\桌面\testClass\testClass\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+d:\homework\testGraphics\testGraphics\bin\Debug\testGraphics.exe.config
+d:\homework\testGraphics\testGraphics\bin\Debug\testGraphics.exe
+d:\homework\testGraphics\testGraphics\bin\Debug\testGraphics.pdb
+d:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.Form1.resources
+d:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.Properties.Resources.resources
+d:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.csproj.GenerateResource.Cache
+d:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.exe
+d:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.pdb
+D:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.Form2.resources
+D:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.Form3.resources
+d:\homework\testGraphics\testGraphics\obj\Debug\testGraphics.csprojResolveAssemblyReference.cache
+F:\Demo\testGraphics\testGraphics\bin\Debug\testGraphics.exe.config
+F:\Demo\testGraphics\testGraphics\obj\Debug\testGraphics.exe
+F:\Demo\testGraphics\testGraphics\obj\Debug\testGraphics.pdb

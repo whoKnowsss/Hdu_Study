@@ -1,0 +1,13 @@
+d:\homework\testWin\testWin\bin\Debug\testWin.exe.config
+d:\homework\testWin\testWin\bin\Debug\testWin.exe
+d:\homework\testWin\testWin\bin\Debug\testWin.pdb
+d:\homework\testWin\testWin\obj\Debug\testWin.frmLogin.resources
+d:\homework\testWin\testWin\obj\Debug\testWin.Properties.Resources.resources
+d:\homework\testWin\testWin\obj\Debug\testWin.csproj.GenerateResource.Cache
+d:\homework\testWin\testWin\obj\Debug\testWin.exe
+d:\homework\testWin\testWin\obj\Debug\testWin.pdb
+d:\homework\testWin\testWin\obj\Debug\testWin.frmMain.resources
+d:\homework\testWin\testWin\obj\Debug\testWin.frmDiary.resources
+D:\homework\testWin\testWin\obj\Debug\testWin.csprojResolveAssemblyReference.cache
+D:\homework\testWin\testWin\obj\Debug\testWin.frmDraw.resources
+d:\homework\testWin\testWin\obj\Debug\testWin.Form2.resources
