@@ -1,0 +1,80 @@
+
+/usr/src/linux-4.10.10/arch/x86/entry/syscalls/syscall_64.tbl
+系统调用表，每个表项记录了某个系统调用的服务例程的入口地址
+332     64      zffsetnice               sys_zffsetnice
+
+/usr/include/asm-gerneric/unistd.h
+惟一的标识每一个系统调用
+#define __NR_zffsetnice 332
+__SYSCALL(__NR_zffsetnice, sys_zffsetnice)
+
+
+
+/usr/src/linux-4.10.10/kernel/sys.c
+编写的服务例程保存在此
+
+/*
+ *add by zff
+ *if flag equals 0 then  getneicevalue
+ *if flag equals 1 then  setnicevalue and return 0
+ */
+
+SYSCALL_DEFINE5(mysetnice, pid_t, pid, int, flag, int, nicevalue, void __user *, prio, void __user *, nice)
+{
+    if (pid < 0 || (flag != 1 && flag != 0)) {
+        return EFAULT;
+    }
+    if (nice == NULL || prio == NULL) {
+        return EFAULT;
+    }
+    struct task_struct *p;
+    for_each_process(p) {
+        if (p->pid == pid) {
+            if (flag == 1) {
+                set_user_nice(p, nicevalue);
+                printk("change nice=%d of pid=%d\n", nicevalue, pid);
+            }
+            printk("pid:%d,current nice:%d, prio:%d\n",pid,task_nice(p),task_prio(p));
+            
+            int val1 = task_prio(p);
+			      copy_to_user(prio,(const void*)&val1,sizeof(int));
+
+			      int val2 = task_prio(p);			
+            copy_to_user(nice,(const void*)&val2,sizeof(int));
+            return 0;
+        }
+    }
+    return EFAULT;
+
+}
+
+
+
+//测试函数
+#include<stdio.h>
+#include<sys/syscall.h>
+#include<unistd.h>
+#define zffsetnice NUM
+int main()
+{
+    int pid = 0;
+    int flag = 0;
+    int nicevalue = 0;
+    int prio = 0;
+    int nice = 0;
+    int ret;
+
+    printf("please input the params: pid, flag, nicevalue\n");
+    while(~scanf("%d %d %d", &pid, &flag, &nicevalue))
+    {
+        ret = syscall(zffsetnice, pid, flag, nicevalue, (void *)&prio, (void *)&nice);
+        if (ret != 0)
+        {
+            printf("syscall error! error code:%d\n", ret);
+            return 0;
+        }
+        printf("pid:%d, flag:%d, nicevalue:%d, prio:%d, nice:%d\n", pid, flag, nicevalue, prio + 100, nice);
+    }
+
+    return 0;
+}
